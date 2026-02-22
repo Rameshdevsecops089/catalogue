@@ -1,0 +1,12 @@
+name: cicd
+on:
+  push:
+  workflow_dispatch:
+jobs: # Pipeline. One workflow can have multiple pipelines
+  common:
+    uses: joindevops-actions/reusable-workflows/.github/workflows/common.yaml@main
+    with:
+      project: roboshop
+      component: catalogue
+      app_type: nodejs
+    
